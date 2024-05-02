@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auran ¤ Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="A.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>                
+                <li><a href="#" onclick="showContent('HomePage')">HomePage</a></li>
+                <li><a href="#" onclick="showContent('patch-notes')">Patch Notes</a></li>
+                <li><a href="#" onclick="showContent('wiki')">Wiki</a></li>
+                <li><a href="#" onclick="showContent('discord')">Discord</a></li>
+                <li><a href="#" onclick="showContent('support')">Suporte</a></li>           
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container" id="HomePage">
+        <p>
+            <div class="home">
+                <h1>Bem-vindo ao Auran ¤ Online</h1>
+                <p>Entre em um mundo de aventuras e desafios!</p>
+                <a href="http://147.135.88.102/Install_AuranOnline.exe" target="_blank" class="play-now-link">
+                    <button class="play-now-button">Jogue Agora!</button> <br> <br>
+                </a>
+                <a href="https://www.virustotal.com/gui/file/d6c05bc248624725a50dfd1d6bac0843898556195b5301dfdec1bf42afea3362/detection" target="_blank" class="play-now-link">
+                    <button class="play-now-button">VirusTotal</button>
+                </a>
+                
+            </div>
+            
+        </div>
+        </div>
+        
+        <div class="container" id="patch-notes" style="display: none;">
+            <!-- Conteúdo de Patch Notes aqui -->
+            <h2>Patch Notes</h2>
+            <div class="page" id="page1">
+                <h3>Versão 1.0.0</h3>
+                <p>Conteúdo do patch notes da versão 1.0.0...</p>
+            </div>
+            <div class="page" id="page2" style="display: none;">
+                <h3>Versão 1.0.1</h3>
+                <p>Conteúdo do patch notes da versão 1.0.1...</p>
+            </div>
+            <!-- Adicione mais páginas conforme necessário -->
+            <!-- <div class="page" id="page3" style="display: none;">
+                <h3>Versão X.X.X</h3>
+                <p>Conteúdo do patch notes da versão X.X.X...</p>
+            </div> -->
+            <div class="pagination">
+                <button onclick="changePage(-1)">Anterior</button>
+                <button onclick="changePage(1)">Próximo</button>
+            </div>
+        </div>
+       
+        
+        <div class="container" id="wiki" style="display: none;">
+            <h2>Selecione abaixo entre: Quests, Itens, Classes e Mapas!</h2>
+            <div class="wiki-options">
+                <img src="quests.png" alt="Quests" onclick="showWikiContent('quests')" style="width: 120px; height: 120px; margin-right: 100px";>			
+                <img src="itens.png" alt="Itens" onclick="showWikiContent('itens')" style="width: 120px; height: 120px; margin-right: 100px";>	
+                <img src="classes.png" alt="Classes" onclick="showWikiContent('classes')" style="width: 120px; height: 120px; margin-right: 100px";>	
+                <img src="maps.png" alt="Maps" onclick="showWikiContent('maps')" style="width: 120px; height: 120px; margin-right: 100px";>
+            </div>			
+            <div id="wiki-content">
+                <!-- O conteúdo da wiki será carregado aqui dinamicamente -->
+				
+            </div>			
+        </div>
+		
+		<!-- Conteúdo para a categoria "Quests" -->
+		<div id="quests" class="wiki-section" style="display: none;">
+			<h3>Quests</h3>
+			<p>Aqui você pode encontrar informações sobre as diferentes quests disponíveis no jogo.</p>
+			<p>Exemplo de informação sobre uma quest:</p>
+			<ul>
+				<li>Nome da Quest: [Nome da Quest]</li>
+				<li>Requisitos: [Requisitos necessários para começar a quest]</li>
+				<li>Descrição: [Descrição da quest e seus objetivos]</li>
+				<li>Recompensas: [Recompensas obtidas ao completar a quest]</li>
+			</ul>
+		</div>
+
+		<!-- Conteúdo para a categoria "Itens" -->
+		<div id="itens" class="wiki-section" style="display: none;">
+			<h3>Itens</h3>
+			<p>Nesta seção, você encontrará informações sobre os diferentes itens disponíveis no jogo.</p>
+			<p>Exemplo de informação sobre um item:</p>
+			<ul>
+				<li>Nome do Item: [Nome do Item]</li>
+				<li>Tipo: [Tipo de item, por exemplo, arma, armadura, poção]</li>
+				<li>Descrição: [Descrição do item e seu efeito]</li>
+			</ul>
+		</div>
+
+		<!-- Conteúdo para a categoria "Classes" -->
+		<div id="classes" class="wiki-section" style="display: none;">
+			<h3>Classes</h3>
+			<p>Aqui você pode aprender sobre as diferentes classes disponíveis no jogo e suas habilidades únicas.</p>
+			<p>Exemplo de informação sobre uma classe:</p>
+			<ul>
+				<li>Nome da Classe: [Nome da Classe]</li>
+				<li>Habilidades: [Lista de habilidades da classe]</li>
+				<li>Estilo de Jogo: [Descrição do estilo de jogo da classe]</li>
+			</ul>
+		</div>
+
+		<!-- Conteúdo para a categoria "Maps" -->
+		<div id="maps" class="wiki-section" style="display: none;">
+			<h3>Maps</h3>
+			<p>Nesta seção, você encontrará mapas do mundo do jogo e informações sobre locais importantes.</p>
+			<p>Exemplo de informação sobre um mapa:</p>
+			<ul>
+				<li>Nome do Mapa: [Nome do Mapa]</li>
+				<li>Locais Importantes: [Lista de locais importantes e suas descrições]</li>
+				<li>Rotas: [Descrição das rotas e caminhos disponíveis]</li>
+			</ul>
+		</div>
+		
+
+        
+        <div class="container" id="discord" style="display: none;">
+            <p>Para ficar por dentro de todas as novidades, entrar em contato com a staff, fazer amigos ou todos ao mesmo tempo, participe:</p>
+            <a href="https://discord.gg/SetU5QZVXb" target="_blank" class="discord-button">
+                <img src="discord.png" alt="Discord" width="160">
+            </a>
+        </div>
+        
+        <div class="container" id="support" style="display: none;">
+            <h2>Suporte</h2>
+            <p>Para entrar em contato com a equipe de suporte do Auran, abra um ticket no Discord:</p>
+            <a href="https://discord.com/channels/1225825769096216657/1225859630307999744/1225859645889970328" target="_blank" class="support-button">
+                Abrir Ticket de Suporte
+            </a>
+            <p> Utilize esse canal tanto para tirar dúvidas, reportar bugs, denuncias e reclamações.</p>
+        </div>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+<script>
+    var currentPage = 1;
+    var totalPages = 2; // Defina o número total de páginas de Patch Notes aqui
+
+    function showContent(id) {
+        // Oculta todos os conteúdos
+        var contents = document.querySelectorAll('.container');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        // Mostra o conteúdo correspondente ao id fornecido
+        document.getElementById(id).style.display = 'block';
+        // Limpa o conteúdo da seção da Wiki
+        var wikiContent = document.getElementById('wiki-content');
+        wikiContent.innerHTML = '';
+    }
+
+    function changePage(offset) {
+        var nextPage = currentPage + offset;
+        if (nextPage >= 1 && nextPage <= totalPages) {
+            document.getElementById('page' + currentPage).style.display = 'none';
+            document.getElementById('page' + nextPage).style.display = 'block';
+            currentPage = nextPage;
+        }
+    }
+    
+    function showWikiContent(category) {
+        var wikiContent = document.getElementById('wiki-content');
+        // Limpa o conteúdo da seção da Wiki
+        wikiContent.innerHTML = '';
+        // Oculta todos os conteúdos da wiki
+        var wikiSections = document.querySelectorAll('.wiki-section');
+        for (var i = 0; i < wikiSections.length; i++) {
+            wikiSections[i].style.display = 'none';
+        }
+        // Mostra o conteúdo correspondente à categoria selecionada
+        var selectedWikiSection = document.getElementById(category);
+        if (selectedWikiSection) {
+            var clonedSection = selectedWikiSection.cloneNode(true); // Clone a seção selecionada
+            clonedSection.style.display = 'block'; // Garanta que o clone esteja visível
+            wikiContent.appendChild(clonedSection); // Adicione o clone ao wikiContent
+        } else {
+            // Se a seção correspondente não existir, você pode carregar dinamicamente ou mostrar uma mensagem de erro
+            wikiContent.innerHTML = '<p>Conteúdo para esta categoria ainda não foi adicionado.</p>';
+        }
+    }
+</script>
+
+
+</body>
+</html>

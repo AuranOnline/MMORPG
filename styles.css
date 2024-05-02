@@ -1,0 +1,119 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #171717; /* Cor de fundo mais escura */
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2d2d2d; /* Cor de fundo mais clara */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bc3f3f; /* Vermelho mais claro */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Branco ao passar o mouse */
+}
+
+main {
+    padding-top: 80px; /* Ajuste de acordo com a altura da barra superior */
+}
+
+.container {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin: 0 auto; /* Isso centralizará o conteúdo */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.page {
+    margin-bottom: 20px; /* Espaçamento entre as páginas */
+}
+
+.pagination {
+    margin-top: 20px; /* Espaçamento entre o conteúdo e a paginação */
+}
+
+button {
+    background-color: #bc3f3f; /* Vermelho mais claro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave para a mudança de cor de fundo */
+}
+
+button:hover {
+    background-color: #b20000; /* Vermelho mais escuro ao passar o mouse */
+}
+
+.home {
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.home h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.discord-button {
+    display: inline-block;
+    background-color: #d8443a; /* Cor do Discord */
+    color: #fff;
+    text-decoration: none;
+    padding: 25px 30px;
+    border-radius: 15px;
+    transition: background-color 0.5s ease; /* Transição suave para a mudança de cor de fundo */
+}
+
+.discord-button:hover {
+    background-color: #b53931; /* Cor do Discord mais escura ao passar o mouse */
+}
+
+
+.download-button {
+    display: inline-block;
+    background-color: #d8443a; /* Cor do download */
+    color: #fff;
+    text-decoration: none;
+    padding: 25px 30px;
+    border-radius: 15px;
+    transition: background-color 0.5s ease; /* Transição suave para a mudança de cor de fundo */
+}
+
+.download-button:hover {
+    background-color: #b53931; /* Cor do download mais escura ao passar o mouse */
+}
+
+.wiki-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.wiki-options img {
+    width: 150px;
+    cursor: pointer;
+}
